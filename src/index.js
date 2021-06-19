@@ -14,7 +14,8 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true,
     },
-    resizable: false
+    resizable: false,
+    devTools: false
   });
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -22,8 +23,8 @@ const createWindow = () => {
   //Hide menu
   mainWindow.setMenuBarVisibility(false);
 
-  // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  //Disable the DevTools
+  mainWindow.webContents.on("devtools-opened", () => { mainWindow.webContents.closeDevTools(); });
 };
 
 // This method will be called when Electron has finished

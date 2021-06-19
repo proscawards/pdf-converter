@@ -56,8 +56,8 @@ $("#convertBtn").click(function (e){
         request.open('POST', 'https://api2.docconversionapi.com/jobs/create', true);
         request.responseType = 'json';
         //Please, paste your AppId and SecretKey values here
-        request.setRequestHeader("X-ApplicationID", process.env.APP_ID);
-        request.setRequestHeader("X-SecretKey", process.env.APP_KEY);
+        request.setRequestHeader("X-ApplicationID", "YOUR_APP_ID_HERE");
+        request.setRequestHeader("X-SecretKey", "YOUR_APP_KEY_HERE");
         request.onload = function () {
             if (request.status == 200) {
                 console.log(request.response);

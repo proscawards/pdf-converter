@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
-  "productName": "my-app",
+  "name": "pdfconverter",
+  "productName": "pdfconverter",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A desktop app to ease PDF to DOCX conversion",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -24,7 +24,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "my_app"
+            "name": "pdfconverter"
           }
         },
         {
