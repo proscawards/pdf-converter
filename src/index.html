@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PDF to DOCX Converter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <script defer src="file.js"></script>
+    <script>
+      setTimeout(function(){
+        $('.loader-bg').fadeToggle();
+      },1500);
+    </script> 
+  </head>
+  <body>
+    <center>
+    <!-- preloader -->
+    <div class="loader-bg">
+      <div class="loader-p"></div>
+    </div>
+    <div class="columns" id="mainDisplay">
+      <div class="column is-full">
+        <h1>📄 PDF to DOCX Converter</h1>
+        <br/>
+        <button class="button is-primary" id="uploadBtn" onclick="$('#uploadFile').click();">
+          <span class="icon">
+            <i class="fas fa-file-upload" id="uploadIcon"></i>
+          </span>
+          <span id="uploadSpan">Upload File</span>
+        </button>
+        <input type="file"  id="uploadFile" value="Upload File" style="display:none;"/>
+        <br/>
+        <br/>
+        <button class="button is-success" id="convertBtn">
+            <span class="icon">
+              <i class="fas fa-file-export"></i>
+            </span>
+            <span>Convert File</span>
+        </button>
+        <br/>
+        <button class="button is-success" id="saveBtn" style="display:none;">
+          <span class="icon">
+            <i class="fas fa-file-download"></i>
+          </span>
+          <span>Save File</span>
+        </button>
+        <br/>
+        <br/>
+        <button class="button is-warning" id="resetBtn" style="display:none;">
+          <span class="icon">
+            <i class="fas fa-file-upload" id="uploadIcon"></i>
+          </span>
+          <span>Upload New File</span>
+        </button>
+      </div>
+    </div>
+  </center>
+  </body>
+</html>
